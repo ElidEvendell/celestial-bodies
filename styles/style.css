@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.Earth {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+}
+
+.Sun {
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    animation: sunCircle 20s linear;
+    animation-iteration-count: infinite; 
+}
+
+.Moon {
+    position: absolute;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    animation: moonCircle 20s linear;
+    animation-iteration-count: infinite;
+}
+
+.light {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: rgb(80, 173, 255);
+    animation: d-l-d 20s linear;
+    /* animation: l-d-l 20s linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1)
+
+}
+
+.dark {
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    top: 50%;
+    background-color: rgb(26, 26, 84);
+    animation: l-d-l 20s linear;
+    
+    /* animation: d-l-d 20s linear; */
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(1)
+}
+
+@keyframes sunCircle {
+    0% {
+    transform: translate(50vw, 25vw) rotate(0deg) translateY(175px) rotate(0deg);
+    }
+    100% {
+    transform: translate(50vw, 25vw) rotate(360deg) translateY(175px) rotate(-360deg);
+    }
+}
+
+@keyframes moonCircle {
+    0% {
+    transform: translate(50vw, 25vw) rotate(-180deg) translateY(175px) rotate(0deg);
+    }
+    100% {
+    transform: translate(50vw, 25vw) rotate(180deg) translateY(175px) rotate(-360deg);
+    }
+}
+
+@keyframes l-d-l {
+    0% {
+       background-color: rgb(80, 173, 255);
+    }
+    25% {
+        background-color: rgb(26, 26, 84);
+    }
+    75% {
+       background-color: rgb(80, 173, 255);
+    }
+    100% {
+       background-color: rgb(80, 173, 255);
+    }
+}
+
+@keyframes d-l-d {
+    0% {
+        background-color: rgb(26, 26, 84);
+    }
+    25% {
+        background-color: rgb(80, 173, 255);
+    }
+    75% {
+       background-color: rgb(26, 26, 84);
+    }
+    100% {
+       background-color: rgb(26, 26, 84);
+    }
+}
