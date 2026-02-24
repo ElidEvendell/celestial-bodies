@@ -13,6 +13,8 @@
 
 .Sun {
     position: absolute;
+    left: 50%;
+    top: 50%;
     z-index: 999;
     transform: translate(-50%, -50%);
     animation: sunCircle 20s linear;
@@ -21,6 +23,8 @@
 
 .Moon {
     position: absolute;
+    left: 50%;
+    top: 50%;
     z-index: 999;
     transform: translate(-50%, -50%);
     animation: moonCircle 20s linear;
@@ -54,19 +58,19 @@
 
 @keyframes sunCircle {
     0% {
-    transform: translate(50vw, 25vw) rotate(0deg) translateY(175px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg) translateY(175px);
     }
     100% {
-    transform: translate(50vw, 25vw) rotate(360deg) translateY(175px) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(360deg) translateY(175px);
     }
 }
 
 @keyframes moonCircle {
     0% {
-    transform: translate(50vw, 25vw) rotate(-180deg) translateY(175px) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(-180deg) translateY(175px);
     }
     100% {
-    transform: translate(50vw, 25vw) rotate(180deg) translateY(175px) rotate(-360deg);
+    transform: translate(-50%, -50%) rotate(180deg) translateY(175px);
     }
 }
 
