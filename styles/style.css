@@ -103,3 +103,14 @@
        background-color: rgb(26, 26, 84);
     }
 }
+
+
+a {
+    z-index: 1001;
+}
+
+p {
+    font-size: 80px;
+    color: aliceblue;
+    position: relative;
+}
